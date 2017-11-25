@@ -9,7 +9,7 @@
     $password = $_POST["password"];
     $role = $_POST["role"];
 
-    $sql = "update catalogs set name='$name',description ='$description' where id=$id";
+    $sql = "update catalogs set user_id='$user_id', catalog_id='$catalog_id',name='$name',image='$image',description ='$description',qty='qty',price='$price' where id=$id";
     $result = $conn->query($sql);
     if($result){
       $_SESSION["flash"] = "Updated success";
